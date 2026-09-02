@@ -13,6 +13,18 @@ function typeEffect(element, text, speed) {
   type();
 }
 
+document.querySelectorAll(".wave-text").forEach((element) => {
+  const text = element.dataset.text;
+
+  element.innerHTML = text
+    .split("")
+    .map((letter, i) => {
+      const content = letter === " " ? "&nbsp;" : letter;
+      return `<span style="animation-delay: ${i * 0.1}s">${content}</span>`;
+    })
+    .join("");
+});
+
 const element1 = document.getElementById("headerlogo1");
 const element2 = document.getElementById("headerlogo2");
 const element3 = document.getElementById("headerlogo3");
