@@ -127,6 +127,7 @@ header nav a:hover {
 }
 
 #section2 {
+  display: flex;
   scroll-margin-top: 20px;
   padding: 50px;
   background-color: #f9fff7;
@@ -136,7 +137,12 @@ header nav a:hover {
 }
 
 #content1 {
-  margin-left: 10%;
+  background-color: #b1c0ac;
+}
+
+#content1,
+#content2 {
+  margin: 20px;
   padding: 30px;
   border: 4px solid #b1c0ac;
   border-radius: 10px;
@@ -147,13 +153,17 @@ header nav a:hover {
   font-family: "DotGothic16", sans-serif;
   font-size: 2.5em;
   color: #003a00;
-  margin: 20px;
+  margin-left: 20px;
+}
+
+#content1 h3 {
+  margin-left: 20px;
 }
 
 #content1 p {
   color: #373b35;
-  margin: 20px;
   width: 650px;
+  margin: 20px;
 }
 
 #content1 #name {
@@ -174,6 +184,48 @@ header nav a:hover {
   color: #600000;
 }
 
+#content2 {
+  display: flex;
+  flex-direction: column;
+  background-color: #b1c0ac;
+}
+
+#content2 h1 {
+  font-family: "DotGothic16", sans-serif;
+  color: #003a00;
+}
+
+#content1 h3,
+#content2 h3 {
+  font-family: "DotGothic16", sans-serif;
+  color: #005c00;
+}
+
+.formation-item {
+  display: flex;
+  align-items: center;
+  border: 3px solid #005c00;
+  border-radius: 10px;
+  margin-block: 10px;
+  background-color: #f9fff7;
+  transition: 0.2s;
+}
+
+.formation-item:hover {
+  transform: translateX(-15px);
+  cursor: pointer;
+}
+
+.formation-item img {
+  margin: 20px;
+  width: 80px;
+  height: auto;
+}
+
+.formation-item p {
+  margin: 10px;
+}
+
 #section3 {
   scroll-margin-top: 20px;
   padding: 50px;
@@ -186,6 +238,11 @@ header nav a:hover {
 #section3 h1 {
   font-family: "DotGothic16", sans-serif;
   color: #003a00;
+}
+
+#section3 h3 {
+  font-family: "DotGothic16", sans-serif;
+  color: #005c00;
 }
 
 #section3 p {
