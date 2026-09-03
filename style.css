@@ -13,14 +13,16 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 30px;
+  padding-top: 30px;
 }
 
 header h1 {
-  font-size: 2em;
+  font-size: 3em;
   font-style: italic;
 }
 
@@ -31,27 +33,39 @@ header h3 {
 }
 
 header h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   color: #005c00;
 }
 
 header h3 {
+  font-size: 1.5em;
   color: #003a00;
 }
 
 header hr {
   background-color: #008500;
   margin: 20px auto;
+  margin-bottom: 0px;
   width: 20%;
   height: 2px;
   border: none;
 }
 
-header nav {
-  margin: 10px;
+#sticky-nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fff7;
+  width: 100%;
+  margin: 0px auto;
 }
 
-header nav a {
+#sticky-nav a {
   display: inline-block;
   font-weight: 700;
   font-style: italic;
@@ -60,13 +74,22 @@ header nav a {
   color: #005c00;
   border: 2px solid #008500;
   border-radius: 5px;
+  margin: 20px;
   margin-inline: 10px;
   padding: 2px 10px;
   transition: 0.2s;
 }
 
-header nav a:hover {
+#sticky-nav a:hover {
   scale: 1.07;
+}
+
+#sticky-nav hr {
+  background-color: #b1c0ac;
+  margin: 0px auto;
+  width: 100%;
+  height: 2px;
+  border: none;
 }
 
 #section1 {
@@ -226,6 +249,15 @@ header nav a:hover {
   margin: 10px;
 }
 
+.section-divisor {
+  background-color: #b1c0ac;
+  margin: 0px auto;
+  margin-bottom: 50px;
+  width: 95%;
+  height: 3px;
+  border: none;
+}
+
 #section3 {
   scroll-margin-top: 20px;
   padding: 50px;
@@ -235,7 +267,8 @@ header nav a:hover {
   text-align: center;
 }
 
-#section3 h1 {
+#section3 h1,
+#section4 h1 {
   font-family: "DotGothic16", sans-serif;
   color: #003a00;
 }
@@ -245,7 +278,8 @@ header nav a:hover {
   color: #005c00;
 }
 
-#section3 p {
+#section3 p,
+#section4 p {
   margin: 20px;
 }
 
@@ -291,7 +325,58 @@ header nav a:hover {
   color: #003a00;
 }
 
+#card-container hr {
+  background-color: #b1c0ac;
+  margin: 0px auto;
+  width: 75%;
+  height: 3px;
+  border: none;
+}
+
 #section3 img {
   width: 60px;
   height: auto;
+}
+
+#section4 {
+  background-color: #b1c0ac;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+#section4sub {
+  font-family: "DotGothic16", sans-serif;
+  color: #003a00;
+}
+
+#project-card-container {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background-color: #7e8b79;
+  width: 500px;
+  padding: 20px;
+  margin: 20px;
+  border: 3px solid #646e60;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  font-family: "DotGothic16", sans-serif;
+  color: #002200;
+  margin: 0px 20px;
+}
+
+.project-languages {
+  display: flex;
+}
+
+.project-languages p {
+  background-color: #b1c0ac;
 }
