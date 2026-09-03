@@ -1,3 +1,5 @@
+/* Reset/Configurações Gerais */
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,6 +13,8 @@ html {
 body {
   background-color: #f9fff7;
 }
+
+/* Header */
 
 header {
   display: flex;
@@ -50,6 +54,8 @@ header hr {
   height: 2px;
   border: none;
 }
+
+/* Navegação Fixa */
 
 #sticky-nav {
   position: sticky;
@@ -92,6 +98,8 @@ header hr {
   border: none;
 }
 
+/* Seção 1 (Apresentação) */
+
 #section1 {
   align-items: center;
   text-align: center;
@@ -109,6 +117,8 @@ header hr {
   color: #003a00;
   margin: 20px;
 }
+
+/* Texto Animado */
 
 .wave-text span {
   font-family: "DotGothic16", sans-serif;
@@ -149,8 +159,11 @@ header hr {
   scale: 1.15;
 }
 
+/* Sobre mim/Idiomas/Formações */
+
 #section2 {
   display: flex;
+  flex-direction: column;
   scroll-margin-top: 20px;
   padding: 50px;
   background-color: #f9fff7;
@@ -159,18 +172,48 @@ header hr {
   text-align: justify;
 }
 
-#content1 {
-  background-color: #b1c0ac;
+#section2 h1,
+#section2 h2 {
+  font-family: "DotGothic16", sans-serif;
+  color: #003a00;
 }
 
-#content1,
-#content2 {
-  margin: 20px;
-  padding: 30px;
-  border: 4px solid #b1c0ac;
-  border-radius: 10px;
-  width: 50%;
+#section2 h3,
+#section2 h4 {
+  font-family: "DotGothic16", sans-serif;
+  color: #005c00;
 }
+
+/* Coluna Sobremim */
+
+.row1 {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* Cards Seção 2 */
+
+#content1,
+#content2,
+#languages {
+  margin: 80px 40px;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #b1c0ac;
+  transition: 0.2s;
+}
+
+#content1:hover,
+#content2:hover,
+#languages:hover {
+  scale: 1.05;
+}
+
+/* Card Sobre mim */
 
 #content1 h1 {
   font-family: "DotGothic16", sans-serif;
@@ -201,27 +244,40 @@ header hr {
   color: #00253a;
 }
 
-#content1 #pucpr {
-  font-family: "DotGothic16", sans-serif;
-  font-weight: bold;
-  color: #600000;
+/* Card Idiomas */
+
+#languages {
+  width: 30%;
 }
 
-#content2 {
+.languages-item {
   display: flex;
   flex-direction: column;
-  background-color: #b1c0ac;
 }
 
-#content2 h1 {
-  font-family: "DotGothic16", sans-serif;
-  color: #003a00;
+#languages .language-title {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
 }
 
-#content1 h3,
-#content2 h3 {
+#languages div h4 {
+  margin-inline: 10px;
+}
+
+#languages .level {
   font-family: "DotGothic16", sans-serif;
+  font-weight: bold;
+  font-size: 0.8em;
   color: #005c00;
+}
+
+/* Card Formações */
+
+#content2 {
+  align-items: center;
+  margin: 0 auto;
+  width: 50%;
 }
 
 .formation-item {
@@ -250,6 +306,8 @@ header hr {
   margin: 10px;
 }
 
+/* Divisores */
+
 .section-divisor {
   background-color: #b1c0ac;
   margin: 0px auto;
@@ -258,6 +316,8 @@ header hr {
   height: 3px;
   border: none;
 }
+
+/* Seção 3 - Linguagens e Tecnologias */
 
 #section3 {
   scroll-margin-top: 20px;
@@ -272,6 +332,7 @@ header hr {
 #section4 h1 {
   font-family: "DotGothic16", sans-serif;
   color: #003a00;
+  font-size: 2.5em;
 }
 
 #section3 h3 {
@@ -282,6 +343,8 @@ header hr {
 #section3 p {
   margin: 20px;
 }
+
+/* Card de Tecnologias */
 
 #card-container {
   display: flex;
@@ -338,6 +401,8 @@ header hr {
   height: auto;
 }
 
+/* Seção 4 - Projetos */
+
 #section4 {
   background-color: #b1c0ac;
   display: flex;
@@ -346,10 +411,21 @@ header hr {
   padding: 30px;
 }
 
+#project-section {
+  text-align: center;
+  padding: 40px;
+}
+
+#project-section p {
+  margin-top: 20px;
+}
+
 #section4sub {
   font-family: "DotGothic16", sans-serif;
   color: #005c00;
 }
+
+/* Container de Projetos */
 
 #project-card-container {
   justify-content: center;
@@ -357,6 +433,8 @@ header hr {
   display: flex;
   flex-wrap: wrap;
 }
+
+/* Card de Projeto */
 
 .project-card {
   background-color: #7e8b79;
@@ -366,22 +444,29 @@ header hr {
   margin: 20px;
   border: 3px solid #646e60;
   border-radius: 10px;
+  transition: 0.2s;
 }
 
-#info {
+.project-card:hover {
+  transform: translateY(-12px);
+}
+
+/* Informações do projeto  */
+
+.info {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
 }
 
-#info section {
+.info section {
   display: flex;
   flex-direction: column;
   justify-content: left;
 }
 
-#info nav {
+.info nav {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -390,12 +475,12 @@ header hr {
   gap: 8px;
 }
 
-#info img {
+.info img {
   width: 20px;
   height: auto;
 }
 
-#info nav a {
+.info nav a {
   display: flex;
   align-items: center;
   gap: 6px;
@@ -405,6 +490,8 @@ header hr {
   text-decoration: none;
   color: #003a00;
 }
+
+/* Titulo Projeto */
 
 .project-card h3 {
   font-family: "DotGothic16", sans-serif;
@@ -418,10 +505,14 @@ header hr {
   color: #003a00;
 }
 
+/* Descrição do projeto */
+
 .project-card p,
 .project-languages {
   margin: 20px;
 }
+
+/* Tecnologias do projeto */
 
 .project-languages {
   display: flex;
@@ -443,6 +534,8 @@ header hr {
   scale: 1.1;
   cursor: pointer;
 }
+
+/* Animação das tecnologias */
 
 .project-languages p:nth-child(1) {
   animation-delay: 0s;
