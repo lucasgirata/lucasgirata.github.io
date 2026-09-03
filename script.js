@@ -29,13 +29,22 @@ const element1 = document.getElementById("headerlogo1");
 const element2 = document.getElementById("headerlogo2");
 const element3 = document.getElementById("headerlogo3");
 const element4 = document.getElementById("section1Title");
+const element5 = document.getElementById("section1SubTitle");
+const element6 = document.getElementById("section2Title");
+const element7 = document.getElementById("section2SubTitle");
 
 const headerText1 = "Lucas Girata";
 const headerText2 = "平田 ルーカス";
 const headerText3 = "Aspiring Software Developer";
 const section1Title = "Sobre mim";
+const section1SubTitle = "私について";
+const section2Title = "Formações";
+const section2SubTitle = "資格・学歴";
 
 typeEffect(element1, headerText1, 100);
 typeEffect(element2, headerText2, 100);
 typeEffect(element3, headerText3, 100);
 typeEffect(element4, section1Title, 100);
+typeEffect(element5, section1SubTitle, 100);
+typeEffect(element6, section2Title, 100);
+typeEffect(element7, section2SubTitle, 100);

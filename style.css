@@ -230,6 +230,7 @@ header hr {
   border: 3px solid #005c00;
   border-radius: 10px;
   margin-block: 10px;
+  width: 70%;
   background-color: #f9fff7;
   transition: 0.2s;
 }
@@ -348,7 +349,7 @@ header hr {
 
 #section4sub {
   font-family: "DotGothic16", sans-serif;
-  color: #003a00;
+  color: #005c00;
 }
 
 #project-card-container {
@@ -379,4 +380,7 @@ header hr {
 
 .project-languages p {
   background-color: #b1c0ac;
+  padding: 5px;
+  border: 2px solid #646e60;
+  border-radius: 5px;
 }
