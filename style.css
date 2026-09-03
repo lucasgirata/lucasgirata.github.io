@@ -361,6 +361,7 @@ header hr {
 .project-card {
   background-color: #7e8b79;
   width: 600px;
+  height: 300px;
   padding: 20px;
   margin: 20px;
   border: 3px solid #646e60;
