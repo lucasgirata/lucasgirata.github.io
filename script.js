@@ -54,3 +54,56 @@ typeEffect(element6, languagesTitle, 100);
 typeEffect(element7, languagesSubTitle, 100);
 typeEffect(element8, section2Title, 100);
 typeEffect(element9, section2SubTitle, 100);
+
+const track = document.getElementById("carouselImages");
+let images = Array.from(track.children);
+let index = 1; // começa em 1 porque o índice 0 vai virar o clone
+let isTransitioning = false;
+
+// Clona a primeira e a última imagem, colocando nas pontas
+function setupClones() {
+  const firstClone = images[0].cloneNode(true);
+  const lastClone = images[images.length - 1].cloneNode(true);
+
+  track.appendChild(firstClone);
+  track.insertBefore(lastClone, images[0]);
+
+  // Posiciona o carrossel no primeiro slide real (sem transição)
+  track.style.transition = "none";
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function moveSlide(direction) {
+  if (isTransitioning) return; // evita clique duplo durante a animação
+  isTransitioning = true;
+
+  index += direction;
+  track.style.transition = "transform 0.5s ease-in-out";
+  track.style.transform = `translateX(-${index * 100}%)`;
+}
+
+track.addEventListener("transitionend", () => {
+  const totalReal = images.length;
+
+  if (index === 0) {
+    track.style.transition = "none";
+    index = totalReal;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  } else if (index === totalReal + 1) {
+    track.style.transition = "none";
+    index = 1;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  isTransitioning = false;
+});
+
+let autoplayInterval = setInterval(() => moveSlide(1), 3000);
+
+const carousel = document.querySelector(".carousel");
+carousel.addEventListener("mouseenter", () => clearInterval(autoplayInterval));
+carousel.addEventListener("mouseleave", () => {
+  autoplayInterval = setInterval(() => moveSlide(1), 3000);
+});
+
+setupClones();
