@@ -57,10 +57,9 @@ typeEffect(element9, section2SubTitle, 100);
 
 const track = document.getElementById("carouselImages");
 let images = Array.from(track.children);
-let index = 1; // começa em 1 porque o índice 0 vai virar o clone
+let index = 1;
 let isTransitioning = false;
 
-// Clona a primeira e a última imagem, colocando nas pontas
 function setupClones() {
   const firstClone = images[0].cloneNode(true);
   const lastClone = images[images.length - 1].cloneNode(true);
@@ -68,13 +67,12 @@ function setupClones() {
   track.appendChild(firstClone);
   track.insertBefore(lastClone, images[0]);
 
-  // Posiciona o carrossel no primeiro slide real (sem transição)
   track.style.transition = "none";
   track.style.transform = `translateX(-${index * 100}%)`;
 }
 
 function moveSlide(direction) {
-  if (isTransitioning) return; // evita clique duplo durante a animação
+  if (isTransitioning) return;
   isTransitioning = true;
 
   index += direction;
@@ -107,3 +105,59 @@ carousel.addEventListener("mouseleave", () => {
 });
 
 setupClones();
+
+const projectDetails = {
+  pokedesk: {
+    title: "Professor's PokéDesk",
+    description:
+      "Catálogo interativo da Pokédex das três primeiras regiões do mundo Pokémon, com busca e filtragem em tempo real, páginas de perfil com possibilidade de montar sua própria equipe utilizando drag-and-drop e persistência dos dados entre sessões. Desenvolvido inteiramente em JavaScript vanilla, sem frameworks.",
+  },
+  rotaBrasil: {
+    title: "RotaBrasil",
+    description:
+      "Aplicação web moderna voltada para a exploração de destinos turísticos e parques nacionais brasileiros. Arquitetura por componentes, rotas tipadas e catálogo estruturado, utilizando React, TypeScript e Tailwind.",
+  },
+  temai: {
+    title: "Tem Aí?",
+    description:
+      "Sistema completo de estoque para mercadinhos de condomínio. Com cadastro de produtos, controle de quantidade de produtos disponíveis e consulta rápida para os moradores, pensado para pequenas as operações locais da área residêncial.",
+  },
+  taskmanager: {
+    title: "Tem Aí?",
+    description: "Gerenciador de Tarefas Universitárias",
+  },
+};
+
+const modalOverlay = document.getElementById("overlay-modelo");
+const modalTitle = document.getElementById("title-modelo");
+const modalDescription = document.getElementById("description-modelo");
+const modalClose = document.getElementById("close-modelo");
+
+document.querySelectorAll(".saiba-mais").forEach((botao) => {
+  botao.addEventListener("click", () => {
+    const projectId = botao.dataset.project;
+    const dados = projectDetails[projectId];
+
+    if (!dados) return;
+
+    modalTitle.textContent = dados.title;
+    modalDescription.textContent = dados.description;
+    modalOverlay.classList.add("active");
+  });
+});
+
+modalClose.addEventListener("click", fecharModal);
+
+// Fecha clicando fora do card (na área escura)
+modalOverlay.addEventListener("click", (event) => {
+  if (event.target === modalOverlay) fecharModal();
+});
+
+// Fecha com a tecla ESC
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") fecharModal();
+});
+
+function fecharModal() {
+  modalOverlay.classList.remove("active");
+}
