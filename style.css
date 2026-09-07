@@ -623,6 +623,8 @@ header hr {
   position: relative;
   transform: translateY(-20px);
   transition: 0.3s;
+  align-items: center;
+  justify-content: center;
 }
 
 .overlay-modelo.active .card-modelo {
@@ -656,6 +658,15 @@ header hr {
   margin-bottom: 20px;
 }
 
+.overlay-modelo img {
+  display: flex;
+  width: 60%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #646e60;
+  margin: 10px auto;
+}
+
 .overlay-modelo span {
   font-weight: bold;
   color: #005c00;
@@ -684,7 +695,7 @@ header hr {
   align-items: stretch;
   justify-content: center;
   gap: 30px;
-  margin: 30px;
+  margin: 50px;
 }
 
 #trabalhos-comunitarios p:hover {
@@ -717,7 +728,41 @@ video:hover {
   scale: 1.05;
 }
 
-.voluntary-item #text2 {
+#trabalhos-comunitarios hr {
+  background-color: #646e60;
+}
+
+.voluntary-item2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 30px;
+}
+
+#video-container2 {
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.teach,
+.secundary-teach {
+  margin-inline: 30px;
+  filter: brightness(0.6);
+}
+
+.teach {
+  width: 20%;
+}
+
+.secundary-teach {
+  width: 15%;
+}
+
+.voluntary-item2 #text2 {
   width: 70%;
   text-align: center;
 }

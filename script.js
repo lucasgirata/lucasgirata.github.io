@@ -111,6 +111,7 @@ const projectDetails = {
     title: "Professor's PokéDesk",
     description:
       "<p>Catálogo interativo da Pokédex das três primeiras regiões do mundo Pokémon, com busca e filtragem em tempo real, páginas de perfil com possibilidade de montar sua própria equipe utilizando drag-and-drop e persistência dos dados entre sessões via JSON Server. Desenvolvido inteiramente em Web e JavaScript vanilla, sem frameworks.</p>",
+    image: "imgs/professorspokedesk.png",
     period: "<p><span>Período: </span>jun/2026 - Em desenvolvimento</p>",
     tech: "<p><span>Linguagens: </span>HTML5, CSS3, JavaScript, JSON Server</p>",
     dev: "<p><span>Desenvolvimento: </span>Individual</p>",
@@ -121,6 +122,7 @@ const projectDetails = {
     title: "RotaBrasil",
     description:
       '<p>Aplicação web moderna voltada para a exploração de destinos turísticos e parques nacionais brasileiros. Arquitetura por componentes, rotas tipadas e catálogo estruturado, utilizando React, TypeScript e Tailwind. Desenvolvida durante a matéria de "Web Development: Framework".</p>',
+    image: "imgs/rotabrasil.png",
     period: "<p><span>Período: </span>mar/2026 - jul/2026</p>",
     tech: "<p><span>Linguagens: </span>React, Vite, React Router, Typescript, Tailwind v4, API REST, Python, MySQL</p>",
     dev: "<p><span>Desenvolvimento: </span>Em equipe (5 integrantes)</p>",
@@ -140,6 +142,7 @@ const projectDetails = {
   taskmanager: {
     title: "Task Manager",
     description: "<p>Gerenciador de Tarefas Universitárias</p>",
+    image: "imgs/taskmanager.png",
     period: "<p><span>Período: </span>jun/2026 - Em desenvolvimento</p>",
     tech: "<p><span>Linguagens: </span>React, Vite, CSS3, JSON Server</p>",
     dev: "<p><span>Desenvolvimento: </span>Individual</p>",
@@ -151,6 +154,7 @@ const projectDetails = {
 const modalOverlay = document.getElementById("overlay-modelo");
 const modalTitle = document.getElementById("title-modelo");
 const modalDescription = document.getElementById("description-modelo");
+const modalImage = document.getElementById("img-modelo");
 const modalPeriod = document.getElementById("period-modelo");
 const modalTech = document.getElementById("tech-modelo");
 const modalDev = document.getElementById("dev-modelo");
@@ -166,6 +170,7 @@ document.querySelectorAll(".saiba-mais").forEach((botao) => {
 
     modalTitle.textContent = dados.title;
     modalDescription.innerHTML = dados.description;
+    modalImage.src = dados.image;
     modalPeriod.innerHTML = dados.period;
     modalTech.innerHTML = dados.tech;
     modalDev.innerHTML = dados.dev;
