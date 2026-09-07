@@ -101,11 +101,41 @@ header hr {
 /* Seção 1 (Apresentação) */
 
 #links {
+  display: flex;
   align-items: center;
   text-align: center;
-  justify-content: center;
   padding: 10px;
   background-color: #b1c0ac;
+  overflow: hidden;
+}
+
+.link-left-tree,
+.link-right-tree {
+  display: inline-block;
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.link-left-tree {
+  transform: scale(8);
+  padding-left: 20px;
+}
+
+.link-right-tree {
+  transform: scale(8);
+  padding-right: 20px;
+}
+
+#links:hover .link-left-tree {
+  transform: translateX(55px) scale(8);
+}
+
+#links:hover .link-right-tree {
+  transform: translateX(-55px) scale(8);
+}
+
+#links #links-container {
+  margin: 0px auto;
 }
 
 #links h2 {
@@ -155,7 +185,7 @@ header hr {
   transition: 0.2s;
 }
 
-#links img:hover {
+#links-container img:hover {
   scale: 1.15;
 }
 
