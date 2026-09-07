@@ -110,27 +110,51 @@ const projectDetails = {
   pokedesk: {
     title: "Professor's PokéDesk",
     description:
-      "Catálogo interativo da Pokédex das três primeiras regiões do mundo Pokémon, com busca e filtragem em tempo real, páginas de perfil com possibilidade de montar sua própria equipe utilizando drag-and-drop e persistência dos dados entre sessões. Desenvolvido inteiramente em JavaScript vanilla, sem frameworks.",
+      "<p>Catálogo interativo da Pokédex das três primeiras regiões do mundo Pokémon, com busca e filtragem em tempo real, páginas de perfil com possibilidade de montar sua própria equipe utilizando drag-and-drop e persistência dos dados entre sessões via JSON Server. Desenvolvido inteiramente em Web e JavaScript vanilla, sem frameworks.</p>",
+    period: "<p><span>Período: </span>jun/2026 - Em desenvolvimento</p>",
+    tech: "<p><span>Linguagens: </span>HTML5, CSS3, JavaScript, JSON Server</p>",
+    dev: "<p><span>Desenvolvimento: </span>Individual</p>",
+    method:
+      "<p><span>Metodologia: </span>Desenvolvimento ágil, com organização via Trello</p>",
   },
   rotaBrasil: {
     title: "RotaBrasil",
     description:
-      "Aplicação web moderna voltada para a exploração de destinos turísticos e parques nacionais brasileiros. Arquitetura por componentes, rotas tipadas e catálogo estruturado, utilizando React, TypeScript e Tailwind.",
+      '<p>Aplicação web moderna voltada para a exploração de destinos turísticos e parques nacionais brasileiros. Arquitetura por componentes, rotas tipadas e catálogo estruturado, utilizando React, TypeScript e Tailwind. Desenvolvida durante a matéria de "Web Development: Framework".</p>',
+    period: "<p><span>Período: </span>mar/2026 - jul/2026</p>",
+    tech: "<p><span>Linguagens: </span>React, Vite, React Router, Typescript, Tailwind v4, API REST, Python, MySQL</p>",
+    dev: "<p><span>Desenvolvimento: </span>Em equipe (5 integrantes)</p>",
+    method:
+      "<p><span>Metodologia: </span>Desenvolvimento ágil, com organização via Trello</p>",
   },
   temai: {
     title: "Tem Aí?",
     description:
-      "Sistema completo de estoque para mercadinhos de condomínio. Com cadastro de produtos, controle de quantidade de produtos disponíveis e consulta rápida para os moradores, pensado para pequenas as operações locais da área residêncial.",
+      "<p>Sistema completo de estoque para mercadinhos de condomínio. Com cadastro de produtos, controle de quantidade de produtos disponíveis e consulta rápida para os moradores, pensado para pequenas as operações locais da área residêncial.</p>",
+    period: "<p><span>Período: </span>mar/2026 - jul/2026</p>",
+    tech: "<p><span>Linguagens: </span>HTML5, CSS3, JavaScript, Python, MySQL</p>",
+    dev: "<p><span>Desenvolvimento: </span>Em equipe (5 integrantes)</p>",
+    method:
+      "<p><span>Metodologia: </span>Desenvolvimento ágil, com organização via Trello</p>",
   },
   taskmanager: {
-    title: "Tem Aí?",
-    description: "Gerenciador de Tarefas Universitárias",
+    title: "Task Manager",
+    description: "<p>Gerenciador de Tarefas Universitárias</p>",
+    period: "<p><span>Período: </span>jun/2026 - Em desenvolvimento</p>",
+    tech: "<p><span>Linguagens: </span>React, Vite, CSS3, JSON Server</p>",
+    dev: "<p><span>Desenvolvimento: </span>Individual</p>",
+    method:
+      "<p><span>Metodologia: </span>Desenvolvimento ágil, com organização via Trello</p>",
   },
 };
 
 const modalOverlay = document.getElementById("overlay-modelo");
 const modalTitle = document.getElementById("title-modelo");
 const modalDescription = document.getElementById("description-modelo");
+const modalPeriod = document.getElementById("period-modelo");
+const modalTech = document.getElementById("tech-modelo");
+const modalDev = document.getElementById("dev-modelo");
+const modalMethod = document.getElementById("method-modelo");
 const modalClose = document.getElementById("close-modelo");
 
 document.querySelectorAll(".saiba-mais").forEach((botao) => {
@@ -141,19 +165,21 @@ document.querySelectorAll(".saiba-mais").forEach((botao) => {
     if (!dados) return;
 
     modalTitle.textContent = dados.title;
-    modalDescription.textContent = dados.description;
+    modalDescription.innerHTML = dados.description;
+    modalPeriod.innerHTML = dados.period;
+    modalTech.innerHTML = dados.tech;
+    modalDev.innerHTML = dados.dev;
+    modalMethod.innerHTML = dados.method;
     modalOverlay.classList.add("active");
   });
 });
 
 modalClose.addEventListener("click", fecharModal);
 
-// Fecha clicando fora do card (na área escura)
 modalOverlay.addEventListener("click", (event) => {
   if (event.target === modalOverlay) fecharModal();
 });
 
-// Fecha com a tecla ESC
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") fecharModal();
 });

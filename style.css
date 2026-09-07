@@ -100,7 +100,7 @@ header hr {
 
 /* Seção 1 (Apresentação) */
 
-#section1 {
+#links {
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -108,12 +108,12 @@ header hr {
   background-color: #b1c0ac;
 }
 
-#section1 h2 {
+#links h2 {
   color: #005c00;
   margin-top: 10px;
 }
 
-#section1 h3 {
+#links h3 {
   color: #003a00;
   margin: 20px;
 }
@@ -126,7 +126,7 @@ header hr {
   transition: transform 0.2s ease;
 }
 
-#section1 .wave-text span {
+#links .wave-text span {
   animation: wave 1.5s ease-in-out infinite;
 }
 
@@ -140,28 +140,28 @@ header hr {
   }
 }
 
-#section1 nav {
+#links nav {
   margin-bottom: 10px;
 }
 
-#section1 a {
+#links a {
   text-decoration: none;
   margin: 20px;
 }
 
-#section1 img {
+#links img {
   width: 50px;
   height: auto;
   transition: 0.2s;
 }
 
-#section1 img:hover {
+#links img:hover {
   scale: 1.15;
 }
 
 /* Sobre mim/Idiomas/Formações */
 
-#section2 {
+#sobre {
   display: flex;
   flex-direction: column;
   scroll-margin-top: 20px;
@@ -172,14 +172,14 @@ header hr {
   text-align: justify;
 }
 
-#section2 h1,
-#section2 h2 {
+#sobre h1,
+#sobre h2 {
   font-family: "DotGothic16", sans-serif;
   color: #003a00;
 }
 
-#section2 h3,
-#section2 h4 {
+#sobre h3,
+#sobre h4 {
   font-family: "DotGothic16", sans-serif;
   color: #005c00;
 }
@@ -321,7 +321,7 @@ header hr {
 
 /* Seção 3 - Linguagens e Tecnologias */
 
-#section3 {
+#tecnologias {
   scroll-margin-top: 20px;
   padding: 50px;
   background-color: #f9fff7;
@@ -330,23 +330,23 @@ header hr {
   text-align: center;
 }
 
-#section3 h1,
-#section4 h1,
-#section5 h1,
-#section6 h1 {
+#tecnologias h1,
+#projetos h1,
+#trabalhos-comunitarios h1,
+#contato h1 {
   font-family: "DotGothic16", sans-serif;
   color: #003a00;
   font-size: 2.5em;
 }
 
-#section3 h3,
-#section5 h3,
-#section6 h3 {
+#tecnologias h3,
+#trabalhos-comunitarios h3,
+#contato h3 {
   font-family: "DotGothic16", sans-serif;
   color: #005c00;
 }
 
-#section3 p {
+#tecnologias p {
   margin: 20px;
 }
 
@@ -403,14 +403,14 @@ header hr {
   border: none;
 }
 
-#section3 img {
+#tecnologias img {
   width: 60px;
   height: auto;
 }
 
 /* Seção 4 - Projetos */
 
-#section4 {
+#projetos {
   background-color: #f9fff7;
   display: flex;
   flex-direction: column;
@@ -427,7 +427,7 @@ header hr {
   margin-top: 20px;
 }
 
-#section4sub {
+#projetossub {
   font-family: "DotGothic16", sans-serif;
   color: #005c00;
 }
@@ -582,7 +582,7 @@ header hr {
   }
 }
 
-#section4 .saiba-mais {
+#projetos .saiba-mais {
   font-size: 1em;
   background-color: #005c00;
   color: #f9fff7;
@@ -594,7 +594,7 @@ header hr {
   transition: 0.2s;
 }
 
-#section4 .saiba-mais:hover {
+#projetos .saiba-mais:hover {
   transform: translateY(-7px);
 }
 
@@ -651,11 +651,18 @@ header hr {
   margin-bottom: 20px;
 }
 
-#description-modelo {
+.overlay-modelo p {
   color: #002200;
+  margin-bottom: 20px;
 }
 
-#section5 {
+.overlay-modelo span {
+  font-weight: bold;
+  color: #005c00;
+  font-family: "DotGothic16", sans-serif;
+}
+
+#trabalhos-comunitarios {
   background-color: #b1c0ac;
   display: flex;
   flex-direction: column;
@@ -663,7 +670,7 @@ header hr {
   padding: 80px;
 }
 
-#section5 p {
+#trabalhos-comunitarios p {
   background-color: #95a38f;
   border: 3px solid #646e60;
   width: 25%;
@@ -680,7 +687,7 @@ header hr {
   margin: 30px;
 }
 
-#section5 p:hover {
+#trabalhos-comunitarios p:hover {
   scale: 1.1;
   border: 3px solid #889682;
 }
@@ -757,26 +764,26 @@ button.next {
   right: 10px;
 }
 
-#section6 {
+#contato {
   display: flex;
   flex-direction: column;
   text-align: center;
   padding: 30px;
 }
 
-#section6 p {
+#contato p {
   margin: 30px auto;
   width: 30%;
 }
 
-#section6 nav {
+#contato nav {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 0px auto;
 }
 
-#section6 a {
+#contato a {
   font-family: "DotGothic16", sans-serif;
   font-weight: bold;
   text-decoration: none;
@@ -787,7 +794,7 @@ button.next {
   gap: 5px;
 }
 
-#section6 img {
+#contato img {
   width: 30px;
   height: 30px;
 }
