@@ -882,3 +882,328 @@ footer {
   padding: 30px;
   color: #002200;
 }
+
+/* Responsividade */
+
+/* Limite horizontal */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+/* Telas Médias */
+
+@media (max-width: 1024px) {
+  .row1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #content1 {
+    width: 85%;
+  }
+
+  #content1 p {
+    width: 100%;
+  }
+
+  #languages {
+    width: 60%;
+  }
+
+  #content2 {
+    width: 75%;
+  }
+
+  .formation-item {
+    width: 90%;
+  }
+
+  #trabalhos-comunitarios p {
+    width: 40%;
+  }
+
+  .project-card {
+    width: 45%;
+    height: auto;
+  }
+
+  .carousel {
+    width: 45%;
+  }
+
+  #video-container {
+    width: 40%;
+  }
+}
+
+/* Telas médias */
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  header h2 {
+    font-size: 1.5em;
+  }
+
+  header h3 {
+    font-size: 1.1em;
+  }
+
+  #sticky-nav div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #sticky-nav a {
+    font-size: 0.9em;
+    margin: 8px 5px;
+  }
+
+  /* Árvores do nav*/
+  #links {
+    flex-wrap: wrap;
+    padding: 20px 10px;
+  }
+
+  .link-left-tree,
+  .link-right-tree {
+    transform: scale(3);
+  }
+
+  #links:hover .link-left-tree,
+  #links:hover .link-right-tree {
+    transform: scale(3);
+  }
+
+  #links-container h2 {
+    font-size: 1.4em;
+  }
+
+  #links-container h3 {
+    font-size: 1em;
+  }
+
+  /* Seção Sobre mim*/
+  #sobre {
+    padding: 25px;
+  }
+
+  #content1,
+  #content2,
+  #languages {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  #content1 h1 {
+    font-size: 1.8em;
+    margin-left: 0;
+  }
+
+  #content1 h3 {
+    margin-left: 0;
+  }
+
+  #content1 p {
+    margin: 15px 0;
+  }
+
+  .formation-item {
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .formation-item:hover {
+    transform: none;
+  }
+
+  /* Seção Tecnologias */
+  #tecnologias {
+    padding: 25px;
+  }
+
+  #card-container section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Seção Projetos */
+  #project-card-container {
+    flex-direction: column;
+  }
+
+  .project-card {
+    width: 90%;
+    height: auto;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .info nav {
+    align-items: flex-start;
+    margin-right: 0;
+  }
+
+  .card-modelo {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .overlay-modelo img {
+    width: 90%;
+  }
+
+  /* Seção Trabalhos comunitários */
+  #trabalhos-comunitarios {
+    padding: 30px 15px;
+  }
+
+  .voluntary-item {
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0;
+  }
+
+  #trabalhos-comunitarios p {
+    width: 90%;
+  }
+
+  #video-container {
+    width: 90%;
+  }
+
+  .voluntary-item2 #text2 {
+    width: 90%;
+  }
+
+  #video-container2 {
+    flex-wrap: wrap;
+  }
+
+  .teach {
+    width: 45%;
+  }
+
+  .secundary-teach {
+    width: 35%;
+  }
+
+  .carousel {
+    width: 90%;
+  }
+
+  /* Seção Contato */
+  #contato p {
+    width: 80%;
+  }
+}
+
+/* Telas Menores */
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  header h2 {
+    font-size: 1.2em;
+  }
+
+  header h3 {
+    font-size: 0.95em;
+  }
+
+  #sticky-nav a {
+    font-size: 0.8em;
+    margin: 6px 4px;
+    padding: 2px 6px;
+  }
+
+  .link-left-tree,
+  .link-right-tree {
+    transform: scale(3);
+    padding: 20px;
+  }
+
+  #links:hover .link-left-tree,
+  #links:hover .link-right-tree {
+    transform: scale(3);
+  }
+
+  #links img {
+    width: 38px;
+  }
+
+  #tecnologias h1,
+  #projetos h1,
+  #trabalhos-comunitarios h1,
+  #contato h1 {
+    font-size: 1.8em;
+  }
+
+  .card {
+    width: 65px;
+    height: 85px;
+  }
+
+  #tecnologias img {
+    width: 45px;
+  }
+
+  .project-card {
+    margin: 5px auto;
+    width: 90%;
+    padding: 15px;
+  }
+
+  .project-card h3 {
+    margin: 0 0 5px 0;
+  }
+
+  .project-card p,
+  .project-languages {
+    margin: 12px 0;
+  }
+
+  #video-container2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .teach,
+  .secundary-teach {
+    width: 70%;
+    margin: 8px 0;
+  }
+
+  .carousel,
+  #video-container,
+  #trabalhos-comunitarios p {
+    width: 100%;
+  }
+
+  #contato p {
+    width: 95%;
+  }
+
+  footer {
+    font-size: 0.85em;
+    padding: 20px;
+  }
+}
