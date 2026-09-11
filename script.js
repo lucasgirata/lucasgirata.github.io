@@ -141,7 +141,8 @@ const projectDetails = {
   },
   taskmanager: {
     title: "Task Manager",
-    description: "<p>Gerenciador de Tarefas Universitárias</p>",
+    description:
+      "<p>To-do-list que facilita a organização e acompanhamento das tarefas do curso. Permite visualizar de forma clara as tarefas de cada matéria, seu respectivo prazo, se possuem peso na nota final e a qual RA (Resultado de Aprendizagem) ela faz parte. Além disso, permiteacompanhar a nota parcial de cada matéria, baseadas nos pesos de cada tarefa somativa e de cada RA, facilitando o entendimento do resultadoparticular de cada um ao longo do semestre.</p>",
     image: "imgs/taskmanager.png",
     period: "<p><span>Período: </span>jun/2026 - Em desenvolvimento</p>",
     tech: "<p><span>Linguagens: </span>React, Vite, CSS3, JSON Server</p>",
