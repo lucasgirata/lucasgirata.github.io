@@ -133,6 +133,7 @@ const projectDetails = {
     title: "Tem Aí?",
     description:
       "<p>Sistema completo de estoque para mercadinhos de condomínio. Com cadastro de produtos, controle de quantidade de produtos disponíveis e consulta rápida para os moradores, pensado para pequenas as operações locais da área residêncial.</p>",
+    image: "imgs/temai.png",
     period: "<p><span>Período: </span>mar/2026 - jul/2026</p>",
     tech: "<p><span>Linguagens: </span>HTML5, CSS3, JavaScript, Python, MySQL</p>",
     dev: "<p><span>Desenvolvimento: </span>Em equipe (5 integrantes)</p>",
