@@ -886,8 +886,7 @@ footer {
 /* Responsividade */
 
 /* Limite horizontal */
-html,
-body {
+main {
   overflow-x: hidden;
   max-width: 100%;
 }
