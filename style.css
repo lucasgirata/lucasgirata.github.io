@@ -390,7 +390,8 @@ header hr {
 }
 
 #front,
-#back {
+#back,
+#ferramentas {
   display: flex;
   flex-direction: column;
   margin: 20px;
@@ -420,15 +421,16 @@ header hr {
 }
 
 #front h3,
-#back h3 {
+#back h3,
+#ferramentas h3 {
   font-family: "DotGothic16", sans-serif;
   color: #003a00;
 }
 
 #card-container hr {
   background-color: #b1c0ac;
-  margin: 0px auto;
-  width: 75%;
+  margin: 30px auto;
+  width: 30%;
   height: 3px;
   border: none;
 }
