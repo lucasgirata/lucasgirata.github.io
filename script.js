@@ -124,7 +124,7 @@ const projectDetails = {
       '<p>Aplicação web moderna voltada para a exploração de destinos turísticos e parques nacionais brasileiros. Arquitetura por componentes, rotas tipadas e catálogo estruturado, utilizando React, TypeScript e Tailwind. Desenvolvida durante a matéria de "Web Development: Framework".</p>',
     image: "imgs/rotabrasil.png",
     period: "<p><span>Período: </span>mar/2026 - jul/2026</p>",
-    tech: "<p><span>Linguagens: </span>React, Vite, React Router, Typescript, Tailwind v4, API REST, Python, MySQL</p>",
+    tech: "<p><span>Linguagens: </span>React, Vite, React Router, Typescript, Tailwind CSS 4, API REST, Python, MySQL</p>",
     dev: "<p><span>Desenvolvimento: </span>Em equipe (5 integrantes)</p>",
     method:
       "<p><span>Metodologia: </span>Desenvolvimento ágil, com organização via Trello</p>",
@@ -141,12 +141,12 @@ const projectDetails = {
       "<p><span>Metodologia: </span>Desenvolvimento ágil, com organização via Trello</p>",
   },
   taskmanager: {
-    title: "Task Manager",
+    title: "Verbo",
     description:
-      "<p>To-do-list que facilita a organização e acompanhamento das tarefas do curso. Permite visualizar de forma clara as tarefas de cada matéria, seu respectivo prazo, se possuem peso na nota final e a qual RA (Resultado de Aprendizagem) ela faz parte. Além disso, permiteacompanhar a nota parcial de cada matéria, baseadas nos pesos de cada tarefa somativa e de cada RA, facilitando o entendimento do resultadoparticular de cada um ao longo do semestre.</p>",
-    image: "imgs/taskmanager.png",
-    period: "<p><span>Período: </span>jun/2026 - Em desenvolvimento</p>",
-    tech: "<p><span>Linguagens: </span>React, Vite, CSS3, JSON Server</p>",
+      "<p>Jogo de adivinhação de palavras de 5 letras inspirado no Termo, desenvolvido com React, Vite, Tailwind CSS 4 e JSON. O jogador tem 6 tentativas para adivinhar a palavra secreta, com indicações visuais de cada letra a cada tentativa. O projeto tem como objetivo explorar os conceitos de desenvolvimento front-end, componentização, gerenciamento de estados e outros.</p>",
+    image: "imgs/verbo.png",
+    period: "<p><span>Período: </span>out/2026 - Em desenvolvimento</p>",
+    tech: "<p><span>Linguagens: </span>React, Vite, Tailwind CSS 4, JSON</p>",
     dev: "<p><span>Desenvolvimento: </span>Individual</p>",
     method:
       "<p><span>Metodologia: </span>Desenvolvimento ágil, com organização via Trello</p>",
